@@ -1,0 +1,114 @@
+<div class="room-management-container">
+  <div class="page-header">
+    <div class="header-left">
+      <h2 class="page-title">
+        Rooms 
+        <span class="room-count">({{ filteredRooms().length }})</span>
+      </h2>
+      <button class="add-btn" (click)="toggleAddForm()">
+        <span class="add-icon">+</span> ADD NEW
+      </button>
+      <button class="back-btn" (click)="goBack()">
+        <span class="back-icon">←</span> BACK
+      </button>
+    </div>
+    <div class="header-right">
+      <span class="license-info">{{ rooms().length }} OF 512 LICENSED ROOMS CONFIGURED</span>
+    </div>
+  </div>
+
+  <!-- Add Room Form -->
+  @if (showAddForm()) {
+    <div class="add-form-container">
+      <div class="add-form">
+        <h3>Add New Room</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="roomNumber">Room Number *</label>
+            <input 
+              type="text" 
+              id="roomNumber"
+              [(ngModel)]="newRoom.room_number"
+              placeholder="Enter room number"
+              class="form-input"
+            />
+          </div>
+          <div class="form-group">
+            <label for="roomType">Room Type *</label>
+            <select 
+              id="roomType"
+              [(ngModel)]="newRoom.room_type"
+              class="form-select"
+            >
+              <option value="0">Select Room Type</option>
+              @for (roomType of roomTypes(); track roomType.id) {
+                <option [value]="roomType.id">{{ roomType.name }} ({{ roomType.code }})</option>
+              }
+            </select>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button class="save-btn" (click)="addRoom()">Save</button>
+          <button class="cancel-btn" (click)="toggleAddForm()">Cancel</button>
+        </div>
+      </div>
+    </div>
+  }
+
+  <!-- Filters -->
+  <div class="filters-container">
+    <div class="filter-group">
+      <select class="filter-select" (change)="onRoomTypeFilterChange($event)">
+        <option value="">Filter by room type</option>
+        @for (roomType of roomTypes(); track roomType.id) {
+          <option [value]="roomType.name">{{ roomType.name }}</option>
+        }
+      </select>
+    </div>
+    <div class="search-group">
+      <input 
+        type="text" 
+        class="search-input" 
+        placeholder="Search"
+        (input)="onSearchChange($event)"
+      />
+      <span class="search-icon">🔍</span>
+    </div>
+  </div>
+
+  <!-- Rooms Table -->
+  <div class="rooms-table-container">
+    <table class="rooms-table">
+      <thead>
+        <tr>
+          <th class="sortable">
+            ROOM NUMBER 
+            <span class="sort-icon">↕</span>
+          </th>
+          <th class="sortable">
+            ROOM TYPE 
+            <span class="sort-icon">↕</span>
+          </th>
+          <th class="delete-header">DELETE</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (room of filteredRooms(); track room.id) {
+          <tr class="room-row">
+            <td class="room-number">{{ room.room_number }}</td>
+            <td class="room-type">{{ room.room_type_name }} {{ room.room_type_code }}</td>
+            <td class="delete-cell">
+              <button class="delete-btn" (click)="deleteRoom(room.id!)">
+                <span class="delete-icon">✕</span>
+              </button>
+            </td>
+          </tr>
+        } @empty {
+          <tr>
+            <td colspan="3" class="no-rooms">No rooms found</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

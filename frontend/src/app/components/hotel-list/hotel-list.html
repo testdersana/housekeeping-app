@@ -1,0 +1,29 @@
+<div class="hotel-list-container">
+  <div class="page-header">
+    <h2>Hotels</h2>
+    <button class="btn btn-primary" routerLink="/hotels/new">Add New Hotel</button>
+  </div>
+
+  <div *ngIf="loading" class="loading">Loading hotels...</div>
+  
+  <div *ngIf="error" class="error-message">{{ error }}</div>
+
+  <div *ngIf="!loading && hotels.length === 0" class="no-hotels">
+    No hotels found. <a routerLink="/hotels/new">Create your first hotel</a>
+  </div>
+
+  <div class="hotels-grid" *ngIf="!loading && hotels.length > 0">
+    <div class="hotel-card" *ngFor="let hotel of hotels">
+      <div class="hotel-info">
+        <h3 class="hotel-name" [routerLink]="['/hotels', hotel.id, 'room-types']">{{ hotel.name }}</h3>
+        <p class="hotel-code">Code: {{ hotel.identification_code }}</p>
+        <p class="hotel-address">{{ hotel.address }}</p>
+      </div>
+      <div class="hotel-actions">
+        <button class="btn btn-secondary" [routerLink]="['/hotels', hotel.id, 'edit']">Edit</button>
+        <button class="btn btn-secondary" [routerLink]="['/hotels', hotel.id, 'room-types']">Room Types</button>
+        <button class="btn btn-danger" (click)="deleteHotel(hotel)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

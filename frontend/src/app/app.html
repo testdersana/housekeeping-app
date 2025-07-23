@@ -1,0 +1,16 @@
+<div class="app-container">
+  <header class="app-header">
+    <div class="header-content">
+      <h1 class="app-title">
+        {{ pageTitle() }}
+        @if (showAdminText()) {
+          <span class="admin-text">Hotel Admin</span>
+        }
+      </h1>
+    </div>
+  </header>
+  
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
+</div>
