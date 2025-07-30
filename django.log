@@ -1,15 +1,118 @@
 Watching for file changes with StatReloader
-[22/Jul/2025 10:04:29] "GET /api/hotels/ HTTP/1.1" 200 2
-[22/Jul/2025 10:06:04] "GET /api/hotels/ HTTP/1.1" 200 2
+[30/Jul/2025 07:04:02] "GET /api/hotels/ HTTP/1.1" 200 178
+[30/Jul/2025 07:05:32] "GET /api/hotels/ HTTP/1.1" 200 178
+[30/Jul/2025 07:08:52] "GET /api/hotels/ HTTP/1.1" 200 178
+[30/Jul/2025 07:08:55] "GET /api/hotels/3/ HTTP/1.1" 200 668
+[30/Jul/2025 07:08:55] "GET /api/hotels/3/room-types/ HTTP/1.1" 200 296
+[30/Jul/2025 07:08:55] "GET /api/hotels/3/ HTTP/1.1" 200 668
+[30/Jul/2025 07:09:20] "GET /api/hotels/ HTTP/1.1" 200 178
+[30/Jul/2025 07:09:23] "GET /api/hotels/3/ HTTP/1.1" 200 668
+[30/Jul/2025 07:09:23] "GET /api/hotels/3/room-types/ HTTP/1.1" 200 296
+[30/Jul/2025 07:09:23] "GET /api/hotels/3/ HTTP/1.1" 200 668
+[30/Jul/2025 07:09:24] "GET /api/hotels/3/rooms/ HTTP/1.1" 200 185
+[30/Jul/2025 07:09:24] "GET /api/hotels/3/ HTTP/1.1" 200 668
+[30/Jul/2025 07:09:24] "GET /api/hotels/3/room-types/ HTTP/1.1" 200 296
+[30/Jul/2025 07:09:24] "GET /api/hotels/3/ HTTP/1.1" 200 668
+[30/Jul/2025 07:09:26] "GET /api/hotels/3/room-types/ HTTP/1.1" 200 296
+[30/Jul/2025 07:09:26] "GET /api/hotels/3/ HTTP/1.1" 200 668
+[30/Jul/2025 07:09:26] "GET /api/hotels/3/ HTTP/1.1" 200 668
+[30/Jul/2025 07:09:35] "GET /api/hotels/3/room-types/ HTTP/1.1" 200 296
+[30/Jul/2025 07:09:35] "GET /api/hotels/3/ HTTP/1.1" 200 668
+[30/Jul/2025 07:09:35] "GET /api/hotels/3/ HTTP/1.1" 200 668
 Not Found: /
-[22/Jul/2025 10:07:29] "GET / HTTP/1.1" 404 2352
+[30/Jul/2025 07:17:25] "GET / HTTP/1.1" 404 2352
+[30/Jul/2025 07:19:19] "GET /api/hotels/ HTTP/1.1" 200 178
+[30/Jul/2025 07:19:23] "GET /api/hotels/3/ HTTP/1.1" 200 668
+[30/Jul/2025 07:19:23] "GET /api/hotels/3/room-types/ HTTP/1.1" 200 296
+[30/Jul/2025 07:19:24] "GET /api/hotels/3/ HTTP/1.1" 200 668
+[30/Jul/2025 07:19:35] "GET /api/hotels/3/room-types/ HTTP/1.1" 200 296
+[30/Jul/2025 07:19:35] "GET /api/hotels/3/ HTTP/1.1" 200 668
+[30/Jul/2025 07:19:35] "GET /api/hotels/3/ HTTP/1.1" 200 668
 Not Found: /
-[22/Jul/2025 10:07:56] "GET / HTTP/1.1" 404 2352
+[30/Jul/2025 07:23:08] "GET / HTTP/1.1" 404 2352
 Not Found: /
-[22/Jul/2025 10:08:14] "GET / HTTP/1.1" 404 2352
+[30/Jul/2025 07:23:23] "GET / HTTP/1.1" 404 2352
 Not Found: /
-[22/Jul/2025 10:13:09] "GET / HTTP/1.1" 404 2352
+[30/Jul/2025 07:23:37] "GET / HTTP/1.1" 404 2352
+[30/Jul/2025 07:24:24] "GET /api/hotels/ HTTP/1.1" 200 178
+[30/Jul/2025 07:24:26] "GET /api/hotels/3/ HTTP/1.1" 200 668
+[30/Jul/2025 07:24:26] "GET /api/hotels/3/room-types/ HTTP/1.1" 200 296
+[30/Jul/2025 07:24:27] "GET /api/hotels/3/ HTTP/1.1" 200 668
 Not Found: /
-[22/Jul/2025 10:14:56] "GET / HTTP/1.1" 404 2352
+[30/Jul/2025 07:24:31] "GET / HTTP/1.1" 404 2352
 Not Found: /
-[22/Jul/2025 10:17:43] "GET / HTTP/1.1" 404 2352
+[30/Jul/2025 07:25:09] "GET / HTTP/1.1" 404 2352
+Not Found: /
+[30/Jul/2025 07:29:03] "GET / HTTP/1.1" 404 2352
+/workspace/housekeeping-app/hotels/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 30, 2025 - 07:03:18
+Django version 5.2.4, using settings 'hotel_housekeeping.settings'
+Starting development server at http://0.0.0.0:12000/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+/workspace/housekeeping-app/hotels/admin.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 30, 2025 - 07:29:50
+Django version 5.2.4, using settings 'hotel_housekeeping.settings'
+Starting development server at http://0.0.0.0:12000/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+/workspace/housekeeping-app/hotels/serializers.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 30, 2025 - 07:30:03
+Django version 5.2.4, using settings 'hotel_housekeeping.settings'
+Starting development server at http://0.0.0.0:12000/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+/workspace/housekeeping-app/hotels/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 30, 2025 - 07:30:21
+Django version 5.2.4, using settings 'hotel_housekeeping.settings'
+Starting development server at http://0.0.0.0:12000/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+/workspace/housekeeping-app/hotels/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 30, 2025 - 07:30:28
+Django version 5.2.4, using settings 'hotel_housekeeping.settings'
+Starting development server at http://0.0.0.0:12000/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+/workspace/housekeeping-app/hotels/urls.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 30, 2025 - 07:30:39
+Django version 5.2.4, using settings 'hotel_housekeeping.settings'
+Starting development server at http://0.0.0.0:12000/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader

@@ -129,9 +129,18 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
-    "https://work-2-xvehiwegmxwpmtad.prod-runtime.all-hands.dev",
+    "https://work-1-atyptzudlngdzgey.prod-runtime.all-hands.dev",
+    "https://work-2-atyptzudlngdzgey.prod-runtime.all-hands.dev",
     "http://localhost:12001",
     "http://127.0.0.1:12001",
+    "http://localhost:12002",
+    "http://127.0.0.1:12002",
+    "http://localhost:12003",
+    "http://127.0.0.1:12003",
+    "http://localhost:12004",
+    "http://127.0.0.1:12004",
+    "http://localhost:12005",
+    "http://127.0.0.1:12005",
 ]
 CORS_ALLOW_HEADERS = [
     'accept',

@@ -1,0 +1,30 @@
+<div class="housekeeping-container">
+  <div class="page-header">
+    <h2>Housekeeping</h2>
+  </div>
+  
+  <div class="content-section">
+    <div class="room-list-container" *ngIf="rooms.length > 0">
+      <div class="room-item" *ngFor="let room of rooms">
+        <div class="room-number">{{ room.room_number }}</div>
+        <div class="room-status">
+          <span class="status-label">{{ room.current_status.status }}</span>
+          <span class="room-type">{{ room.room_type_name }}</span>
+        </div>
+        <div class="occupancy-status">{{ room.current_status.occupancy_status }}</div>
+      </div>
+    </div>
+    
+    <div class="no-rooms" *ngIf="rooms.length === 0">
+      <p>No rooms found for this hotel.</p>
+    </div>
+    
+    <div class="loading" *ngIf="loading">
+      <p>Loading rooms...</p>
+    </div>
+    
+    <div class="error" *ngIf="error">
+      <p>Error loading rooms: {{ error }}</p>
+    </div>
+  </div>
+</div>

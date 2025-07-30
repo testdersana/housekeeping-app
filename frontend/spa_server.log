@@ -1,0 +1,80 @@
+127.0.0.1 - - [29/Jul/2025 11:39:46] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [29/Jul/2025 11:39:50] "GET /hotels HTTP/1.1" 200 -
+10.2.38.10 - - [29/Jul/2025 11:40:37] "GET / HTTP/1.1" 200 -
+10.2.38.10 - - [29/Jul/2025 11:40:37] "GET /polyfills.js HTTP/1.1" 200 -
+10.2.38.10 - - [29/Jul/2025 11:40:37] "GET /main.js HTTP/1.1" 200 -
+10.2.38.10 - - [29/Jul/2025 11:40:37] "GET /styles.css HTTP/1.1" 200 -
+10.2.38.10 - - [29/Jul/2025 11:43:33] "GET /hotels HTTP/1.1" 200 -
+10.2.38.10 - - [29/Jul/2025 11:43:33] "GET /polyfills-B6TNHZQ6.js HTTP/1.1" 200 -
+10.2.38.10 - - [29/Jul/2025 11:43:33] "GET /main-YDULE4DZ.js HTTP/1.1" 200 -
+10.2.38.10 - - [29/Jul/2025 11:43:33] "GET /styles-SNY77EQX.css HTTP/1.1" 200 -
+10.2.38.10 - - [29/Jul/2025 12:01:17] "GET / HTTP/1.1" 200 -
+10.2.38.10 - - [29/Jul/2025 12:01:17] "GET /main-PQDA4KRE.js HTTP/1.1" 200 -
+10.2.38.10 - - [29/Jul/2025 12:01:17] "GET /polyfills-B6TNHZQ6.js HTTP/1.1" 200 -
+10.2.38.10 - - [29/Jul/2025 12:01:17] "GET /styles-SNY77EQX.css HTTP/1.1" 200 -
+10.2.60.141 - - [29/Jul/2025 12:02:05] "GET / HTTP/1.1" 304 -
+10.2.60.141 - - [29/Jul/2025 12:02:22] "GET / HTTP/1.1" 304 -
+10.2.60.141 - - [29/Jul/2025 12:02:58] "GET / HTTP/1.1" 304 -
+10.2.60.141 - - [29/Jul/2025 12:05:58] "GET /hotels HTTP/1.1" 200 -
+10.2.60.141 - - [29/Jul/2025 12:05:59] "GET /styles-SNY77EQX.css HTTP/1.1" 200 -
+10.2.60.141 - - [29/Jul/2025 12:05:59] "GET /polyfills-B6TNHZQ6.js HTTP/1.1" 200 -
+10.2.60.141 - - [29/Jul/2025 12:05:59] "GET /main-DAWFABVX.js HTTP/1.1" 200 -
+10.2.38.10 - - [29/Jul/2025 12:07:24] "GET / HTTP/1.1" 200 -
+10.2.46.10 - - [29/Jul/2025 12:14:58] "GET / HTTP/1.1" 200 -
+10.2.38.10 - - [29/Jul/2025 12:19:51] "GET / HTTP/1.1" 200 -
+10.2.46.10 - - [29/Jul/2025 12:27:54] "GET / HTTP/1.1" 200 -
+10.2.96.12 - - [29/Jul/2025 12:30:24] "GET /hotels HTTP/1.1" 200 -
+10.2.96.12 - - [29/Jul/2025 12:30:24] "GET /polyfills-B6TNHZQ6.js HTTP/1.1" 200 -
+10.2.96.12 - - [29/Jul/2025 12:30:24] "GET /main-26MSJFS6.js HTTP/1.1" 200 -
+10.2.96.12 - - [29/Jul/2025 12:30:24] "GET /styles-SNY77EQX.css HTTP/1.1" 200 -
+10.2.96.12 - - [29/Jul/2025 12:30:44] "GET /hotels/3/room-types HTTP/1.1" 200 -
+10.2.96.12 - - [29/Jul/2025 12:30:44] code 404, message File not found
+10.2.96.12 - - [29/Jul/2025 12:30:44] "GET /hotels/3/polyfills-B6TNHZQ6.js HTTP/1.1" 404 -
+10.2.96.12 - - [29/Jul/2025 12:30:44] code 404, message File not found
+10.2.96.12 - - [29/Jul/2025 12:30:44] "GET /hotels/3/styles-SNY77EQX.css HTTP/1.1" 404 -
+10.2.96.12 - - [29/Jul/2025 12:30:44] code 404, message File not found
+10.2.96.12 - - [29/Jul/2025 12:30:44] "GET /hotels/3/main-26MSJFS6.js HTTP/1.1" 404 -
+10.2.96.12 - - [29/Jul/2025 12:30:45] code 404, message File not found
+10.2.96.12 - - [29/Jul/2025 12:30:45] "GET /hotels/3/favicon.ico HTTP/1.1" 404 -
+10.2.96.12 - - [29/Jul/2025 12:30:54] "GET /hotels/3/room-types HTTP/1.1" 304 -
+10.2.96.12 - - [29/Jul/2025 12:30:54] code 404, message File not found
+10.2.96.12 - - [29/Jul/2025 12:30:54] "GET /hotels/3/main-26MSJFS6.js HTTP/1.1" 404 -
+10.2.96.12 - - [29/Jul/2025 12:30:54] code 404, message File not found
+10.2.96.12 - - [29/Jul/2025 12:30:54] "GET /hotels/3/polyfills-B6TNHZQ6.js HTTP/1.1" 404 -
+10.2.96.12 - - [29/Jul/2025 12:30:54] code 404, message File not found
+10.2.96.12 - - [29/Jul/2025 12:30:54] "GET /hotels/3/styles-SNY77EQX.css HTTP/1.1" 404 -
+10.2.96.12 - - [29/Jul/2025 12:31:00] "GET / HTTP/1.1" 200 -
+10.2.96.12 - - [29/Jul/2025 12:31:00] "GET /polyfills-B6TNHZQ6.js HTTP/1.1" 200 -
+10.2.96.12 - - [29/Jul/2025 12:31:00] "GET /main-26MSJFS6.js HTTP/1.1" 200 -
+10.2.96.12 - - [29/Jul/2025 12:31:00] "GET /styles-SNY77EQX.css HTTP/1.1" 200 -
+10.2.96.12 - - [29/Jul/2025 12:31:02] "GET /favicon.ico HTTP/1.1" 200 -
+10.2.38.10 - - [29/Jul/2025 12:31:25] "GET / HTTP/1.1" 304 -
+10.2.96.12 - - [29/Jul/2025 12:33:16] "GET / HTTP/1.1" 200 -
+10.2.96.12 - - [29/Jul/2025 12:33:16] "GET /polyfills-B6TNHZQ6.js HTTP/1.1" 200 -
+10.2.96.12 - - [29/Jul/2025 12:33:16] "GET /main-4EM2PAWL.js HTTP/1.1" 200 -
+10.2.96.12 - - [29/Jul/2025 12:33:16] "GET /styles-SNY77EQX.css HTTP/1.1" 200 -
+10.2.38.10 - - [29/Jul/2025 12:35:08] "GET / HTTP/1.1" 304 -
+10.2.38.10 - - [29/Jul/2025 12:35:40] "GET / HTTP/1.1" 304 -
+10.2.38.10 - - [29/Jul/2025 12:37:33] "GET /hotels/3/rooms HTTP/1.1" 200 -
+10.2.38.10 - - [29/Jul/2025 12:37:33] code 404, message File not found
+10.2.38.10 - - [29/Jul/2025 12:37:33] "GET /hotels/3/polyfills-B6TNHZQ6.js HTTP/1.1" 404 -
+10.2.38.10 - - [29/Jul/2025 12:37:33] code 404, message File not found
+10.2.38.10 - - [29/Jul/2025 12:37:33] "GET /hotels/3/main-4EM2PAWL.js HTTP/1.1" 404 -
+10.2.38.10 - - [29/Jul/2025 12:37:33] code 404, message File not found
+10.2.38.10 - - [29/Jul/2025 12:37:33] "GET /hotels/3/styles-SNY77EQX.css HTTP/1.1" 404 -
+10.2.38.10 - - [29/Jul/2025 12:37:59] "GET /hotels/3/rooms HTTP/1.1" 200 -
+10.2.38.10 - - [29/Jul/2025 12:38:00] code 404, message File not found
+10.2.38.10 - - [29/Jul/2025 12:38:00] "GET /hotels/3/polyfills-B6TNHZQ6.js HTTP/1.1" 404 -
+10.2.38.10 - - [29/Jul/2025 12:38:00] code 404, message File not found
+10.2.38.10 - - [29/Jul/2025 12:38:00] "GET /hotels/3/main-4EM2PAWL.js HTTP/1.1" 404 -
+10.2.38.10 - - [29/Jul/2025 12:38:00] code 404, message File not found
+10.2.38.10 - - [29/Jul/2025 12:38:00] "GET /hotels/3/styles-SNY77EQX.css HTTP/1.1" 404 -
+10.2.38.10 - - [29/Jul/2025 12:38:00] code 404, message File not found
+10.2.38.10 - - [29/Jul/2025 12:38:00] "GET /hotels/3/favicon.ico HTTP/1.1" 404 -
+10.2.38.10 - - [29/Jul/2025 12:38:05] "GET / HTTP/1.1" 200 -
+10.2.38.10 - - [29/Jul/2025 12:38:06] "GET /polyfills-B6TNHZQ6.js HTTP/1.1" 200 -
+10.2.38.10 - - [29/Jul/2025 12:38:06] "GET /main-4EM2PAWL.js HTTP/1.1" 200 -
+10.2.38.10 - - [29/Jul/2025 12:38:06] "GET /styles-SNY77EQX.css HTTP/1.1" 200 -
+10.2.38.10 - - [29/Jul/2025 12:38:07] "GET /favicon.ico HTTP/1.1" 200 -
+10.2.46.10 - - [29/Jul/2025 12:47:12] "GET / HTTP/1.1" 304 -
+10.2.60.141 - - [29/Jul/2025 12:55:21] "GET / HTTP/1.1" 304 -

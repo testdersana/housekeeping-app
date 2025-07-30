@@ -1,28 +1,24 @@
 <div class="room-type-container">
   <div class="page-header">
     <div class="header-left">
-      <h2>Room Types</h2>
+      <h2>Room Types ({{ roomTypes.length }})</h2>
+      <button class="add-new-btn" (click)="showAddForm = !showAddForm">
+        + ADD NEW
+      </button>
       <button class="back-btn" (click)="backToHotels()">
-        ← BACK TO ROOM TYPES
+        <span class="back-icon">←</span> BACK
       </button>
       <button class="rooms-btn" (click)="goToRooms()">
         Rooms
       </button>
-    </div>
-    <div class="header-right">
-      <div class="language-selector">
-        <label>SELECT LANGUAGE</label>
-        <select>
-          <option>English</option>
-        </select>
-      </div>
     </div>
   </div>
 
   <div *ngIf="error" class="error-message">{{ error }}</div>
 
   <div class="content-section" *ngIf="hotel">
-    <div class="edit-section">
+    <!-- Add/Edit Form - Collapsible -->
+    <div class="edit-section" *ngIf="showAddForm || editingRoomType">
       <h3>{{ editingRoomType ? 'Edit' : 'Add' }} Room Type {{ editingRoomType ? editingRoomType.name : '' }}</h3>
       <p class="mandatory-note">Fields marked with * are mandatory!</p>
 
@@ -69,26 +65,38 @@
           <button type="submit" class="btn btn-primary" [disabled]="!roomTypeForm.valid || loading">
             {{ editingRoomType ? 'Update' : 'Add' }} Room Type
           </button>
-          <button type="button" class="btn btn-secondary" (click)="cancelEdit()" *ngIf="editingRoomType">
+          <button type="button" class="btn btn-secondary" (click)="cancelEdit()">
             Cancel
           </button>
         </div>
       </form>
     </div>
 
-    <div class="room-types-list" *ngIf="roomTypes.length > 0">
-      <h3>Existing Room Types</h3>
-      <div class="room-types-grid">
-        <div class="room-type-card" *ngFor="let roomType of roomTypes">
-          <div class="room-type-info">
-            <h4>{{ roomType.name }}</h4>
-            <p><strong>Code:</strong> {{ roomType.code }}</p>
-            <p *ngIf="roomType.max_occupancy"><strong>Max Occupancy:</strong> {{ roomType.max_occupancy }}</p>
+    <!-- Room Types Table -->
+    <div class="room-types-table" *ngIf="roomTypes.length > 0">
+      <div class="table-header">
+        <div class="header-cell sort-cell">SORT</div>
+        <div class="header-cell room-type-cell">ROOM TYPE ↑</div>
+        <div class="header-cell room-code-cell">ROOM CODE ↑</div>
+        <div class="header-cell delete-cell">DELETE</div>
+      </div>
+      
+      <div class="table-row" *ngFor="let roomType of roomTypes">
+        <div class="cell sort-cell">
+          <div class="drag-handle">
+            <span class="drag-dots">⋮⋮</span>
           </div>
-          <div class="room-type-actions">
-            <button class="btn btn-sm btn-secondary" (click)="editRoomType(roomType)">Edit</button>
-            <button class="btn btn-sm btn-danger" (click)="deleteRoomType(roomType)">Delete</button>
-          </div>
+        </div>
+        <div class="cell room-type-cell" (click)="editRoomType(roomType)">
+          {{ roomType.name }}
+        </div>
+        <div class="cell room-code-cell">
+          {{ roomType.code }}
+        </div>
+        <div class="cell delete-cell">
+          <button class="delete-btn" (click)="deleteRoomType(roomType)">
+            ✕
+          </button>
         </div>
       </div>
     </div>

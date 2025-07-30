@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 class Hotel(models.Model):
     name = models.CharField(max_length=200)
@@ -41,3 +42,30 @@ class Room(models.Model):
     class Meta:
         ordering = ['hotel', 'room_number']
         unique_together = ['hotel', 'room_number']
+
+class RoomStatus(models.Model):
+    STATUS_CHOICES = [
+        ('INSPECTED', 'Inspected'),
+        ('OUT_OF_SERVICE', 'Out of Service'),
+        ('OUT_OF_ORDER', 'Out of Order'),
+    ]
+    
+    OCCUPANCY_STATUS = [
+        ('VACANT', 'Vacant'),
+        ('OCCUPIED', 'Occupied'),
+    ]
+    
+    room = models.ForeignKey(Room, on_delete=models.CASCADE, related_name='statuses')
+    status_date = models.DateField(default=timezone.now)
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='INSPECTED')
+    occupancy_status = models.CharField(max_length=20, choices=OCCUPANCY_STATUS, default='VACANT')
+    notes = models.TextField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"{self.room} - {self.status} - {self.status_date}"
+
+    class Meta:
+        ordering = ['room', '-status_date']
+        unique_together = ['room', 'status_date']

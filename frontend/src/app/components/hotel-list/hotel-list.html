@@ -22,6 +22,7 @@
       <div class="hotel-actions">
         <button class="btn btn-secondary" [routerLink]="['/hotels', hotel.id, 'edit']">Edit</button>
         <button class="btn btn-secondary" [routerLink]="['/hotels', hotel.id, 'room-types']">Room Types</button>
+        <button class="btn btn-secondary" [routerLink]="['/hotels', hotel.id, 'housekeeping']">Housekeeping</button>
         <button class="btn btn-danger" (click)="deleteHotel(hotel)">Delete</button>
       </div>
     </div>

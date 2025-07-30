@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hotel Housekeeping API Test</h1>
+        
+        <div>
+            <button onclick="testHotels()">Test Hotels API</button>
+            <button onclick="testRooms()">Test Rooms API</button>
+            <button onclick="testRoomTypes()">Test Room Types API</button>
+        </div>
+        
+        <h2>Results:</h2>
+        <pre id="results">Click a button to test the API...</pre>
+    </div>
+
+    <script>
+        const apiBaseUrl = 'https://work-1-atyptzudlngdzgey.prod-runtime.all-hands.dev/api';
+        const resultsElement = document.getElementById('results');
+        
+        function displayResults(data, error = null) {
+            if (error) {
+                resultsElement.textContent = `Error: ${error}`;
+                resultsElement.style.color = 'red';
+            } else {
+                resultsElement.textContent = JSON.stringify(data, null, 2);
+                resultsElement.style.color = 'black';
+            }
+        }
+        
+        async function fetchApi(endpoint) {
+            try {
+                resultsElement.textContent = 'Loading...';
+                const startTime = performance.now();
+                
+                const response = await fetch(`${apiBaseUrl}/${endpoint}/`);
+                
+                const endTime = performance.now();
+                const timeElapsed = (endTime - startTime).toFixed(2);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                displayResults({
+                    timeElapsed: `${timeElapsed} ms`,
+                    data: data
+                });
+            } catch (error) {
+                displayResults(null, error.message);
+            }
+        }
+        
+        function testHotels() {
+            fetchApi('hotels');
+        }
+        
+        function testRooms() {
+            fetchApi('rooms');
+        }
+        
+        function testRoomTypes() {
+            fetchApi('room-types');
+        }
+    </script>
+</body>
+</html>

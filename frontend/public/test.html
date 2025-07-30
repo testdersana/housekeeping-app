@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Test</title>
+    <script>
+        function testAPI() {
+            const startTime = performance.now();
+            document.getElementById('status').textContent = 'Testing...';
+            
+            fetch('https://work-1-atyptzudlngdzgey.prod-runtime.all-hands.dev/api/hotels/')
+                .then(response => {
+                    const endTime = performance.now();
+                    const timeElapsed = endTime - startTime;
+                    
+                    if (response.ok) {
+                        return response.json().then(data => {
+                            document.getElementById('status').textContent = `Success! Time: ${timeElapsed.toFixed(2)}ms`;
+                            document.getElementById('result').textContent = JSON.stringify(data, null, 2);
+                        });
+                    } else {
+                        document.getElementById('status').textContent = `Error: ${response.status} ${response.statusText}. Time: ${timeElapsed.toFixed(2)}ms`;
+                    }
+                })
+                .catch(error => {
+                    const endTime = performance.now();
+                    const timeElapsed = endTime - startTime;
+                    document.getElementById('status').textContent = `Network error: ${error.message}. Time: ${timeElapsed.toFixed(2)}ms`;
+                });
+        }
+    </script>
+</head>
+<body>
+    <h1>API Test</h1>
+    <button onclick="testAPI()">Test API</button>
+    <div>
+        <h2>Status:</h2>
+        <div id="status">Not tested yet</div>
+    </div>
+    <div>
+        <h2>Result:</h2>
+        <pre id="result"></pre>
+    </div>
+</body>
+</html>

@@ -26,7 +26,7 @@ export interface RoomType {
 })
 export class HotelService {
 
-  private apiUrl = 'https://work-1-xvehiwegmxwpmtad.prod-runtime.all-hands.dev/api';
+  private apiUrl = 'https://work-1-atyptzudlngdzgey.prod-runtime.all-hands.dev/api';
 
   constructor(private http: HttpClient) { }
 

@@ -18,6 +18,7 @@ export class RoomTypeSetupComponent implements OnInit {
   loading = false;
   error: string | null = null;
   editingRoomType: RoomType | null = null;
+  showAddForm = false;
 
   constructor(
     private fb: FormBuilder,
@@ -33,7 +34,7 @@ export class RoomTypeSetupComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
+    this.route.parent?.params.subscribe(params => {
       if (params['id']) {
         this.hotelId = +params['id'];
         this.loadHotel();
@@ -88,6 +89,7 @@ export class RoomTypeSetupComponent implements OnInit {
         next: () => {
           this.roomTypeForm.reset();
           this.editingRoomType = null;
+          this.showAddForm = false;
           this.loadRoomTypes();
         },
         error: (error) => {
@@ -106,6 +108,7 @@ export class RoomTypeSetupComponent implements OnInit {
 
   cancelEdit() {
     this.editingRoomType = null;
+    this.showAddForm = false;
     this.roomTypeForm.reset();
   }
 
